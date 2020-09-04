@@ -40,6 +40,8 @@ RUN apt-get install -qqy \
         python3-pip
 RUN git config --system credential.'https://source.developers.google.com'.helper gcloud.sh
 
+RUN apt-get --only-upgrade install google-cloud-sdk-firestore-emulator google-cloud-sdk-app-engine-go google-cloud-sdk-datalab google-cloud-sdk-anthos-auth google-cloud-sdk-pubsub-emulator google-cloud-sdk-kind google-cloud-sdk-app-engine-python-extras google-cloud-sdk-app-engine-java google-cloud-sdk-datastore-emulator google-cloud-sdk-skaffold google-cloud-sdk-app-engine-python google-cloud-sdk-bigtable-emulator google-cloud-sdk google-cloud-sdk-cloud-build-local google-cloud-sdk-minikube kubectl google-cloud-sdk-cbt google-cloud-sdk-app-engine-grpc google-cloud-sdk-spanner-emulator google-cloud-sdk-kpt
+
 USER 0
 # Set permissions on /etc/passwd and /home to allow arbitrary users to write
 COPY --chown=0:0 entrypoint.sh /
