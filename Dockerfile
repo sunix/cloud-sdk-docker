@@ -56,6 +56,7 @@ RUN /tmp/install-editor-tooling.sh && rm -f /tmp/install-editor-tooling.sh
 
 USER 10001
 ENV HOME=/home/user
+ENV SHELL=/bin/bash
 WORKDIR /projects
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD ["tail", "-f", "/dev/null"]

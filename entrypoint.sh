@@ -15,7 +15,7 @@ fi
 
 # Setup $PS1 for a consistent and reasonable prompt
 if [ -w "${HOME}" ] && [ ! -f "${HOME}"/.bashrc ]; then
-  echo "PS1='\s-\v \w \$ '" > "${HOME}"/.bashrc
+  echo "PS1='\[\e[1;31m\]\u\[\e[0;39m\]@\[\e[1;36m\][\$CHE_MACHINE_NAME]\[\e[0;39m\]:\[\e[1;33m\]\w\[\e[0;39m\]\[\e[1;32m\]$(__git_ps1 " (%s)")\[\e[0;39m\] \[\e[1;39m\]\n\$ '" > "${HOME}"/.bashrc
 fi
 
 # Add current (arbitrary) user to /etc/passwd and /etc/group
