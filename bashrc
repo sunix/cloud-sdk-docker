@@ -1,3 +1,6 @@
+source ~/git-completion.bash
+source ~/git-prompt.sh
+
 export PS1='\[\e[0;39m\]\[🟢\] $CHE_MACHINE_NAME\[\e[0;39m\]:\[\e[38;5;215m\]\w\[\e[0;39m\]\[\e[1;32m\] \[\e[38;5;215m\]>_ \[\e[0m\]'
 
 echo "              [38;5;m##,             "
