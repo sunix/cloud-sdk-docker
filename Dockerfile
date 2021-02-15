@@ -57,6 +57,12 @@ RUN /tmp/install-editor-tooling.sh && rm -f /tmp/install-editor-tooling.sh
 USER 10001
 ENV HOME=/home/user
 ENV SHELL=/bin/bash
+WORKDIR /home/user
+RUN wget https://raw.github.com/git/git/master/contrib/completion/git-completion.bash && \
+    wget https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
+
+ADD bashrc /home/user/.bashrc
+
 WORKDIR /projects
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD ["tail", "-f", "/dev/null"]
