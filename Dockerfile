@@ -6,6 +6,7 @@ ENV CLOUD_SDK_VERSION=$CLOUD_SDK_VERSION
 ENV PATH "$PATH:/opt/google-cloud-sdk/bin/"
 COPY --from=static-docker-source /usr/local/bin/docker /usr/local/bin/docker
 RUN apt-get -qqy update && apt-get install -qqy \
+        wget \
         curl \
         python3-dev \
         python3-crcmod \
